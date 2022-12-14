@@ -1,0 +1,1 @@
+Change `self.SC_DISABLE_SPEEDY = false;` in index.html
