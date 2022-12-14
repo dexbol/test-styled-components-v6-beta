@@ -12496,44 +12496,39 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
-
-const round = styled_components__WEBPACK_IMPORTED_MODULE_3__.keyframes`
+const round = styled_components__WEBPACK_IMPORTED_MODULE_2__.keyframes`
     0% {
         transform: rotate(0);
     }
-
     100% {
         transform: rotate(360deg);
     }
 `;
-const StyledCircle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div`
+const StyledCircle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div`
   width: 222px;
   height: 222px;
   border-radius: 50%;
   background: linear-gradient(red, blue);
-
-  &.play {
-    animation: ${round} 1s infinite;
+  @keyframes xx {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
+  animation: xx 1s infinite;
 `;
 const Demo = function () {
-  var [playing, setPlaying] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  var clickHandler = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
-    setPlaying(p => !p);
-  }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(StyledCircle, {
-    onClick: clickHandler,
-    className: playing ? "play" : ""
-  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(StyledCircle, {});
 };
-(0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.querySelector("div")).render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Demo, {}));
+(0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(document.querySelector("div")).render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Demo, {}));
 })();
 
 /******/ })()
